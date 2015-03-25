@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class AppHandler {
     private Biblioteca biblioteca;
-    private final Map<String, String> data = new HashMap<String, String>();;
+    private final Map<String, String> data = new HashMap<String, String>();
 
     public AppHandler() {
         Library library = setupLibrary();
@@ -17,6 +17,7 @@ public class AppHandler {
     private void setupCommands() {
         biblioteca.addCommand(new ListBooksCommand("List Books",biblioteca));
         biblioteca.addCommand(new IssueBookCommand("Issue Book",biblioteca, data));
+        biblioteca.addCommand(new ReturnBookCommand("Return Book",biblioteca,data));
         biblioteca.addCommand(new QuitCommand("Quit"));
     }
 

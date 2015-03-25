@@ -37,9 +37,10 @@ public class Biblioteca {
         try{
             return commands.get(option-1).execute();
         }
-        catch(ArrayIndexOutOfBoundsException e){
+        catch (IndexOutOfBoundsException e){
             return "Select Valid Option.";
         }
+
    }
 
     public void displayOptions() {
